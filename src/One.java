@@ -1,3 +1,9 @@
+/*   Created by IntelliJ IDEA.
+ *   Author: Sanat Kumar Dubey (sanat04)
+ *   Date: 20-02-2024
+ *   Time: 21:55
+ *   File: One.java
+ */
 // Multiples of 3 or 5;
     public class One {
         public static void main(String[] args) {
