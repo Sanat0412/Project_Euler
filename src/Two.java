@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 
 /*   Created by IntelliJ IDEA.
  *   Author: Sanat Kumar Dubey (sanat04)
@@ -7,6 +6,7 @@ import java.util.ArrayList;
  *   File: Two.java
  */
 //Even Fibonacci Numbers
+import java.util.ArrayList;
 public class Two {
     public static void main(String[] args) {
         long val=4000000;
