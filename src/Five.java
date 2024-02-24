@@ -4,7 +4,7 @@
  *   Time: 20:29
  *   File: Five.java
  */
-
+//Smallest Multiple
 public class Five {
     static long gcd(long a, long b) {
         if (b > a) {
