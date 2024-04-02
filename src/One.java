@@ -5,12 +5,22 @@
  *   File: One.java
  */
 // Multiples of 3 or 5;
-    public class One {
-        public static void main(String[] args) {
+import java.util.*;
+public class One {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        while(t-->0){
+            int n=sc.nextInt();
             long sum=0;
-            for(int i=3;i<1000;i++){
-                if(i%3==0 || i%5==0) sum+=i;
-            }
+            long th=(n-1)/3;
+            long fi=(n-1)/5;
+            long fif=(n-1)/15;
+            long sum1=(th*(th+1)/2)*3;
+            long sum2=(fi*(fi+1)/2)*5;
+            long sum3=(fif*(fif+1)/2)*15;
+            sum+=sum1-sum3+sum2;
             System.out.println(sum);
         }
     }
+}

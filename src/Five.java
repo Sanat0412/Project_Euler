@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /*   Created by IntelliJ IDEA.
  *   Author: Sanat Kumar Dubey (sanat04)
  *   Date: 24-02-2024
@@ -22,11 +24,16 @@ public class Five {
     }
 
     public static void main(String[] args) {
-        long a=1;
-        for (int i = 1; i <=20; i++) {
-            a=lcm(a,i);
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while (t-- > 0) {
+            int n= sc.nextInt();
+            long a = 1;
+            for (int i = 1; i <= n; i++) {
+                a = lcm(a, i);
+            }
+            System.out.println(a);
         }
-        System.out.println(a);
     }
 }
 

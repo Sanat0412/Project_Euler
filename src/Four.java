@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /*   Created by IntelliJ IDEA.
  *   Author: Sanat Kumar Dubey (sanat04)
  *   Date: 23-02-2024
@@ -7,15 +9,20 @@
 //Largest Palindrome Product
 public class Four {
     public static void main(String[] args) {
-        int n=helper();
-        System.out.println(n);
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while (t-- > 0) {
+            int v = sc.nextInt();
+            int n = helper(v);
+            System.out.println(n);
+        }
     }
-    static int helper(){
+    static int helper(int v){
         int maxi=0;
         for (int i = 999; i>=100; i--) {
             for (int j = i; j >=100; j--) {
                  int pro=i*j;
-                 if(isP(pro) && pro>maxi) maxi=pro;
+                 if(isP(pro) && pro>maxi && pro<v) maxi=pro;
             }
         }
         return maxi;

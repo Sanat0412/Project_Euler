@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /*   Created by IntelliJ IDEA.
  *   Author: Sanat Kumar Dubey (sanat04)
  *   Date: 24-02-2024
@@ -7,8 +9,13 @@
 //10001st Prime
 public class Seven {
     public static void main(String[] args) {
-        int n = helper(6);
-        System.out.println(n);
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while (t-- > 0) {
+            int n = sc.nextInt();
+            int vas=helper(n);
+            System.out.println(vas);
+        }
     }
 
     public static int helper(int n) {

@@ -7,23 +7,27 @@
  */
 //Even Fibonacci Numbers
 import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Two {
     public static void main(String[] args) {
-        long val=4000000;
-        ArrayList<Integer> arr=new ArrayList<>();
-        arr.add(0);
-        arr.add(1);
-        long sum=0;
-        int i=2;
-        for (i = 2;  ; i++) {
-            int fin=arr.get(i-1)+arr.get(i-2);
-            arr.add(fin);
-            if(fin>val) break;
-            else{
-                if(fin%2==0) sum+=fin;
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while (t-- > 0) {
+            long val = sc.nextLong();
+            long a = 0;
+            long b = 1;
+            long sum = 0;
+            while (a + b <= val) {
+                long fin = a + b;
+                if (fin % 2 == 0) {
+                    sum += fin;
+                }
+                a = b;
+                b = fin;
             }
+            System.out.println(sum);
         }
-        System.out.println(sum);
     }
 }
 
